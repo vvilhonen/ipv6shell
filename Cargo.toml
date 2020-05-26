@@ -1,0 +1,17 @@
+[package]
+name = "ipv6shell"
+version = "0.1.0"
+authors = ["vesa@vilhonen.com"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.31"
+colored = "1.9.3"
+chrono = "0.4.11"
+env_logger = "0.7.1"
+futures = "0.3.5"
+lazy_static = "1.4.0"
+lettre = "0.9.3"
+lettre_email = "0.9.4"
+log = "0.4.8"
+tokio = { version="0.2", features=["full"] }
