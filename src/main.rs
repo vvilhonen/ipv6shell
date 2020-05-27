@@ -289,6 +289,9 @@ impl Shell {
         while buf.len() < 1024 {
             let mut chunk = [0u8; 256];
             let n = timeout(Duration::from_secs(500), self.socket.read(&mut chunk)).await??;
+            if n == 0 {
+                break;
+            }
             buf.extend(&chunk[..n]);
             let empty = buf
                 .iter()
